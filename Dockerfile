@@ -6,7 +6,7 @@ RUN adduser -D flask && pip install pipenv
 
 WORKDIR /app
 
-COPY . /app
+ADD debloy.tar /app/
 
 RUN pipenv install --deploy --system && chown -R flask:flask /app
 
