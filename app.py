@@ -11,9 +11,10 @@ from flask_cors import CORS
 import requests
 from requests.exceptions import ConnectionError
 
-CENTRAL_NODE_BASE_URL = "http://localhost:8080/api/v1"
-OUR_URL = "http://localhost:8082/api/v1"
+import os
 
+CENTRAL_NODE_BASE_URL = os.environ["CENTRAL_NODE_BASE_URL"]
+OUR_URL = os.environ["OWN_URL"]
 
 class PrefStoreClient:
     def __init__(self, base_url):
