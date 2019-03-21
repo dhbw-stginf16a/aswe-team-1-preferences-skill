@@ -4,7 +4,6 @@ import logging
 import requests
 import json
 logger = logging.getLogger(__name__)
-from api.models.utils import eventToJSON
 
 from app import PREFSTORE_CLIENT
 
