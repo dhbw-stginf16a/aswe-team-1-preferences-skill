@@ -27,7 +27,7 @@ class PrefStoreClient:
 
     def set_user_prefs(self, user, prefs):
         r = requests.patch("{}/preferences/user/{}".format(self.base_url, user), json = prefs)
-        assert r.status_code == 200
+        assert (r.status_code == 200 or r.status_code == 204)
 
 PREFSTORE_CLIENT = PrefStoreClient(CENTRAL_NODE_BASE_URL)
 
